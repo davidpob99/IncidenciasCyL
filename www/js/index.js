@@ -60,7 +60,7 @@ function onLoad() {
 
         var espacio =  document.createElement("BR");
         tarjetas.appendChild(espacio);
-      }
+      }      
     })
     .fail(function() {
       console.log("Error");
