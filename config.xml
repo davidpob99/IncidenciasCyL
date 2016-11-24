@@ -4,14 +4,11 @@
     <description>
         Aplicación para visualizar de forma sencilla las incidencias en las carreteras de titularidad de la Junta de Castilla y León.
     </description>
-    <author email="david.pobcri@educa.jcyl.es">
+    <author>
         David Población Criado
     </author>
     <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <platform name="windows"/>
-    <preference name="windows-appx-target" value="uap" />
-    <preference name="windows-arch" value="anycpu" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />    
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -19,14 +16,15 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-     <platform name="android">
+    <platform name="android">
         <icon src="res/android/drawable-ldpi-icon.png" density="ldpi" />
         <icon src="res/android/drawable-mdpi-icon.png" density="mdpi" />
         <icon src="res/android/drawable-hdpi-icon.png" density="hdpi" />
         <icon src="res/android/drawable-xhdpi-icon.png" density="xhdpi" />
-     </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
+    </platform>  
+    <platform name="windows">
+    
     </platform>
+    <preference name="windows-appx-target" value="uap" />
+    <preference name="windows-arch" value="anycpu" />
 </widget>
