@@ -9,9 +9,12 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
 */
-
-var app = {};
-app.initialize();
+function close(){
+  document.querySelector('.mdl-layout__drawer').addEventListener('click', function () {
+    document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
+    this.classList.remove('is-visible');
+    }, false);
+}
 
 function onLoad() {
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
@@ -60,7 +63,7 @@ function onLoad() {
 
         var espacio =  document.createElement("BR");
         tarjetas.appendChild(espacio);
-      }      
+      }
     })
     .fail(function() {
       console.log("Error");
@@ -117,6 +120,7 @@ function avila(){
         var espacio =  document.createElement("BR");
         tarjetas.appendChild(espacio);
       }
+
       }
     })
     .fail(function() {
