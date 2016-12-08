@@ -9,16 +9,11 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
 */
-function close(){
-  document.querySelector('.mdl-layout__drawer').addEventListener('click', function () {
-    document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
-    this.classList.remove('is-visible');
-    }, false);
-}
-
-function onLoad() {
+function onLoad() {  
+  ga('send', 'event', 'Provincia', 'Todas');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
+
     .done(function(data) {
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
@@ -72,6 +67,7 @@ function onLoad() {
 }
 
 function avila(){
+  ga('send', 'event', 'Provincia', 'Avila');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -124,15 +120,18 @@ function avila(){
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
 }
 
 function burgos(){
+  ga('send', 'event', 'Provincia', 'Burgos');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
+
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
@@ -181,15 +180,18 @@ function burgos(){
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
 }
 
 function leon(){
+  ga('send', 'event', 'Provincia', 'Leon');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
+
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
@@ -238,15 +240,18 @@ function leon(){
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
 }
 
 function palencia(){
+  ga('send', 'event', 'Provincia', 'Palencia');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
+
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
@@ -295,15 +300,18 @@ function palencia(){
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
 }
 
 function salamanca(){
+  ga('send', 'event', 'Provincia', 'Salamanca');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
+
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
@@ -352,15 +360,18 @@ function salamanca(){
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
 }
 
 function segovia() {
+  ga('send', 'event', 'Provincia', 'Segovia');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
+
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
@@ -409,15 +420,18 @@ function segovia() {
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
 }
 
 function soria(){
+  ga('send', 'event', 'Provincia', 'Soria');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
+
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
@@ -466,15 +480,18 @@ function soria(){
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
 }
 
 function valladolid(){
+  ga('send', 'event', 'Provincia', 'Valladolid');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
+
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
@@ -523,15 +540,18 @@ function valladolid(){
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
 }
 
 function zamora(){
+  ga('send', 'event', 'Provincia', 'Zamora');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
+
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
@@ -580,6 +600,7 @@ function zamora(){
       }
     })
     .fail(function() {
+
       console.log("Error");
       alert("No se pueden obtener los datos. Inténtelo de nuevo en unos minutos");
     }) ;
