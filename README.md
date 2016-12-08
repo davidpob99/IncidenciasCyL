@@ -14,3 +14,7 @@ Disponible en Google Play gracias a Adrián Arroyo Calle.
 
 ### Linux, Windows Desktop y MacOS
 https://github.com/davidpob99/IncidenciasCyL/releases
+
+## Donar
+
+Si piensas que esta aplicación es útil puedes donar a través de BitCoin (BTC). Dirección del monedero: 15VsGWJdXf4KDEAaCofvgHezp2QnYh9mV3
