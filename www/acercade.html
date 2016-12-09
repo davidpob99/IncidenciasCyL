@@ -29,8 +29,12 @@ GNU General Public License for more details.
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-88563869-3', 'auto');
-          ga('send', 'pageview');
+          //ga('create', 'UA-88563869-3', 'auto');
+          ga('create','UA-88563869-3',{'storage':'none','clientId':device.uuid});
+          ga('set','checkProtocolTask',null);
+          ga('set','anonymizeIp',true);
+          ga('set','forceSSL',true);
+          ga('send','pageview');
 
         </script>
 
