@@ -9,12 +9,13 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
 */
-var gaPlugin;
 
 function onLoad() {
-  gaPlugin = window.plugins.gaPlugin;
-  gaPlugin.init(successHandler, errorHandler, "UA-88563869-2", 10);
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Todas');
+  var analytics = navigator.analytics;
+  // set the tracking id
+  analytics.setTrackingId('UA-88563869-2');
+  analytics.sendAppView('Inicio', successCallback, errorCallback);
+  analytics.sendEvent('Provincia', 'Todas');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
 
@@ -71,7 +72,7 @@ function onLoad() {
 }
 
 function avila(){
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Avila');
+  analytics.sendEvent('Provincia', 'Avila');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -131,7 +132,7 @@ function avila(){
 }
 
 function burgos(){
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Burgos');
+  analytics.sendEvent('Provincia', 'Burgos');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -191,7 +192,7 @@ function burgos(){
 }
 
 function leon(){
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Leon');
+  analytics.sendEvent('Provincia', 'Leon');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -251,7 +252,7 @@ function leon(){
 }
 
 function palencia(){
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Palencia');
+  analytics.sendEvent('Provincia', 'Palencia');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -311,7 +312,7 @@ function palencia(){
 }
 
 function salamanca(){
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Salamanca');
+  analytics.sendEvent('Provincia', 'Salamanca');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -371,7 +372,7 @@ function salamanca(){
 }
 
 function segovia() {
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Segovia');
+  analytics.sendEvent('Provincia', 'Segovia');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -431,7 +432,7 @@ function segovia() {
 }
 
 function soria(){
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Soria');
+  analytics.sendEvent('Provincia', 'Soria');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -491,7 +492,7 @@ function soria(){
 }
 
 function valladolid(){
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Valladolid');
+  analytics.sendEvent('Provincia', 'Valladolid');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -551,7 +552,7 @@ function valladolid(){
 }
 
 function zamora(){
-  gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Zamora');
+  analytics.sendEvent('Provincia', 'Zamora');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
