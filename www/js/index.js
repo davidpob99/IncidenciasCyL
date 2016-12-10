@@ -11,7 +11,8 @@
 */
 
 function onLoad() {
-
+  window.ga.startTrackerWithId('UA-88563869-2', 30);
+  window.ga.trackView('Screen Title');
    //$.pagetracker._trackEvent('Provincia', 'Todas');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
@@ -72,7 +73,7 @@ function avila(){
    //$.pagetracker._trackEvent('Provincia', 'Avila');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
-    .done(function(data) {
+    .done(function(data) {<
       document.getElementById("tarjetas").innerHTML= "";
       console.log("Completado sin errores");
       console.log(data.fecha);
