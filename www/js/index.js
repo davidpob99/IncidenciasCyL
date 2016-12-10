@@ -11,12 +11,9 @@
 */
 var gaPlugin;
 
-function onDeviceReady() {
-    gaPlugin = window.plugins.gaPlugin;
-    gaPlugin.init(successHandler, errorHandler, "UA-88563869-2", 10);
-}
-
 function onLoad() {
+  gaPlugin = window.plugins.gaPlugin;
+  gaPlugin.init(successHandler, errorHandler, "UA-88563869-2", 10);
   gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, 'Provincia', 'Todas');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
