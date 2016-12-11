@@ -9,11 +9,21 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
 */
+function onDeviceReady() {
+      gaPlugin = window.plugins.gaPlugin;
+      gaPlugin.init(successHandler, errorHandler, "UA-88563869-2", 10);
+}
+
+function successHandler(){
+  console.log("success");
+}
+function errorHandler(){
+  console.log("error");
+}
 
 function onLoad() {
-  window.ga.startTrackerWithId('UA-88563869-2', 30);
-  window.ga.trackView('Screen Title');
-   //$.pagetracker._trackEvent('Provincia', 'Todas');
+  document.addEventListener("deviceready", onDeviceReady, false);
+  gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Todas');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
 
@@ -70,7 +80,7 @@ function onLoad() {
 }
 
 function avila(){
-   //$.pagetracker._trackEvent('Provincia', 'Avila');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Avila');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {<
@@ -130,7 +140,7 @@ function avila(){
 }
 
 function burgos(){
-   //$.pagetracker._trackEvent('Provincia', 'Burgos');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Burgos');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -190,7 +200,7 @@ function burgos(){
 }
 
 function leon(){
-   //$.pagetracker._trackEvent('Provincia', 'Leon');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Leon');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -250,7 +260,7 @@ function leon(){
 }
 
 function palencia(){
-   //$.pagetracker._trackEvent('Provincia', 'Palencia');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Palencia');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -310,7 +320,7 @@ function palencia(){
 }
 
 function salamanca(){
-   //$.pagetracker._trackEvent('Provincia', 'Salamanca');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Salamanca');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -370,7 +380,7 @@ function salamanca(){
 }
 
 function segovia() {
-   //$.pagetracker._trackEvent('Provincia', 'Segovia');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Segovia');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -430,7 +440,7 @@ function segovia() {
 }
 
 function soria(){
-   //$.pagetracker._trackEvent('Provincia', 'Soria');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Soria');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -490,7 +500,7 @@ function soria(){
 }
 
 function valladolid(){
-   //$.pagetracker._trackEvent('Provincia', 'Valladolid');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Valladolid');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -550,7 +560,7 @@ function valladolid(){
 }
 
 function zamora(){
-   //$.pagetracker._trackEvent('Provincia', 'Zamora');
+   gaPlugin.trackEvent( successHandler, errorHandler, 'Provincia', 'Zamora');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
