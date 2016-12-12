@@ -1,12 +1,18 @@
 {
   "name": "IncidenciasCyL",
-  "main": "index.html",
+  "description": "Aplicación para visualizar de forma sencilla las incidencias en las carreteras de Castilla y León",
+  "version": "1.0.0",
+  "main": "index.html",	
   "window": {
     "toolbar": false,
     "width": 660,
-    "height": 500
+    "height": 500,
+    "icon": "icon.png"    
   },
   "scripts": {
     "start": "nw ."
-  }
+  },
+  "maintainers":[ {
+   "name": "David Población Criado"   
+  }]
 }
