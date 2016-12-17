@@ -9,6 +9,16 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
 */
+
+/*
+ *This function does not work*
+function toggle_drawer(){
+  var drawer = document.getElementsByClassName('mdl-layout__drawer')[0];
+  var drawer_obfuscator = document.getElementsByClassName('mdl-layout__obfuscator')[0];
+  drawer.classList.toggle("is-visible");
+  drawer_obfuscator.classList.toggle("is-visible");
+}*/
+
 function onLoad() {  
   analytics.event('Provincia', 'Todas');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
