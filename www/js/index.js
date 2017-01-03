@@ -19,6 +19,27 @@ function toggle_drawer(){
   drawer_obfuscator.classList.toggle("is-visible");
 }*/
 
+function onDeviceReady() {
+    document.removeEventListener('deviceready', onDeviceReady, false);
+      // Set AdMobAds options:
+    admob.setOptions({
+        publisherId:          "NONE",
+        interstitialAdId:     "NONE",
+        tappxIdiOS:           "NONE",      
+        tappxIdAndroid:       "/120940746/Pub-13925-Android-8771",         
+        autoShowBanner:       true,
+        autoShowInterstitial: true, 
+        isTesting:            false,
+        tappxShare:           1                                       
+      });
+      // Start showing banners (atomatic when autoShowBanner is set to true)
+    admob.createBannerView();
+      // Request interstitial (will present automatically when autoShowInterstitial is set to true)
+    admob.requestInterstitialAd();
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
 function onLoad() {  
   analytics.event('Provincia', 'Todas');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){

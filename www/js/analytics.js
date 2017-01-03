@@ -10,7 +10,7 @@ var analytics = {
     clientID: 'android',
     userID: null,
 	appName: 'IncidenciasCyL',
-	appVersion: '1.2.1',
+	appVersion: '1.3.0',
 	debug: false,
 	performanceTracking: true,
 	errorTracking: true,
