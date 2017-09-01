@@ -41,7 +41,7 @@ function onDeviceReady() {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onLoad() {  
-  analytics.event('Provincia', 'Todas');
+  //analytics.event('Provincia', 'Todas');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
 
@@ -98,7 +98,7 @@ function onLoad() {
 }
 
 function avila(){
-  analytics.event('Provincia', 'Avila');
+  //analytics.event('Provincia', 'Avila');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -158,7 +158,7 @@ function avila(){
 }
 
 function burgos(){
-  analytics.event('Provincia', 'Burgos');
+  //analytics.event('Provincia', 'Burgos');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -218,7 +218,7 @@ function burgos(){
 }
 
 function leon(){
-  analytics.event('Provincia', 'Leon');
+  //analytics.event('Provincia', 'Leon');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -278,7 +278,7 @@ function leon(){
 }
 
 function palencia(){
-  analytics.event('Provincia', 'Palencia');
+  //analytics.event('Provincia', 'Palencia');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -338,7 +338,7 @@ function palencia(){
 }
 
 function salamanca(){
-  analytics.event('Provincia', 'Salamanca');
+  //analytics.event('Provincia', 'Salamanca');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -398,7 +398,7 @@ function salamanca(){
 }
 
 function segovia() {
-  analytics.event('Provincia', 'Segovia');
+  //analytics.event('Provincia', 'Segovia');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -458,7 +458,7 @@ function segovia() {
 }
 
 function soria(){
-  analytics.event('Provincia', 'Soria');
+  //analytics.event('Provincia', 'Soria');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -518,7 +518,7 @@ function soria(){
 }
 
 function valladolid(){
-  analytics.event('Provincia', 'Valladolid');
+  //analytics.event('Provincia', 'Valladolid');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -578,7 +578,7 @@ function valladolid(){
 }
 
 function zamora(){
-  analytics.event('Provincia', 'Zamora');
+  //analytics.event('Provincia', 'Zamora');
   $.getJSON("http://servicios.jcyl.es/InviPublica/OpenData?formato=json", function(json){
     })
     .done(function(data) {
@@ -638,6 +638,6 @@ function zamora(){
 }
 
 function acercade(){
-	analytics.screenView('Acercade');
+	//analytics.screenView('Acercade');
 }
 
